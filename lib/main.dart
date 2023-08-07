@@ -33,11 +33,45 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
+    var pair = appState.current;
 
     return Scaffold(
       body: Column(
         children: [
-          Text('Hello World!'),
+          TextField(
+            decoration: InputDecoration(labelText: ""),
+            keyboardType: TextInputType.number,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('+'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('-'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('x'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('/'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('='),
+          ),
         ],
       ),
     );
